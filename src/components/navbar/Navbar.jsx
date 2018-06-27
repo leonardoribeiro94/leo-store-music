@@ -25,7 +25,7 @@ class Navbar extends React.Component {
         <AppBar position="static" style={headerStyle}>
           <Toolbar>
             <Typography variant="title" color="inherit">
-              <span style={menuFont}>L <span style={{ color: "#4cd566" }}>e</span> o  S t o r e</span>
+              <span style={menuFont}>L<span style={{ color: "#4cd566" }}>e</span> o  S t o r e</span>
             </Typography>
           </Toolbar>
         </AppBar>

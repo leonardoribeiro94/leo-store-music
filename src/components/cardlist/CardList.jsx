@@ -2,11 +2,11 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Course from "../course/Course";
-import ItunesService from "../../services/itunes-service";
+import Cards from "../cards/Cards";
+import ItunesService from "../../services/ItunesService";
 const _itunesService = new ItunesService();
 
-class Corousel extends React.Component {
+class CardList extends React.Component {
 
   constructor(props) {
 
@@ -44,12 +44,12 @@ class Corousel extends React.Component {
               onChange={event => this.onSearchInputChange(event.target.value)}
             />
             <Button variant="contained" color="primary" onClick={this.loadProductList}>
-              Teste!
+              Search!
               </Button>
             <Grid container spacing={24} style={{ padding: 24 }}>
               {this.state.products.map(items => (
                 <Grid key={items.trackId} item xs={4} sm={4} lg={4} xl={3}>
-                  <Course image={items.artworkUrl100} title={items.trackName} songPreview={items.previewUrl} />
+                  <Cards image={items.artworkUrl100} title={items.trackName} songPreview={items.previewUrl} />
                 </Grid>
               ))}
             </Grid>
@@ -60,4 +60,4 @@ class Corousel extends React.Component {
   }
 }
 
-export default Corousel;
+export default CardList;
