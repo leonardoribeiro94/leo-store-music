@@ -7,10 +7,7 @@ import Typography from '@material-ui/core/Typography'
 
 
 class Course extends React.Component {
-    constructor() {
-        super();
-    }
-
+     
     render() {
         return (
             <div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Cards from "../cards/Cards";
+import Cards from "../../components/cards/Cards";
 import ItunesService from "../../services/ItunesService";
 const _itunesService = new ItunesService();
 
