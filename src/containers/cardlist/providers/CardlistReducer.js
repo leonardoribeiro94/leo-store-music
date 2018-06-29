@@ -1,8 +1,3 @@
-import {
-    combineReducers,
-    applyMiddleware
-} from "redux";
-import thunk from "redux-thunk";
 import type from "./ActionType";
 
 const initialState = {
@@ -10,7 +5,7 @@ const initialState = {
     list: []
 };
 
-const state = (state = initialState, action) => {
+const cardlist = (state = initialState, action) => {
     switch (action.type) {
         case type.GET_MUSIC_LIST:
             return {
@@ -27,6 +22,4 @@ const state = (state = initialState, action) => {
     }
 };
 
-export const Reducers = combineReducers({
-    state
-}, applyMiddleware(thunk));
+export default cardlist;

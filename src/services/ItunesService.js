@@ -8,7 +8,7 @@ const config = {
 
 class ItunesService {
     getProductList = async (data) => {
-        
+
         let value = await axios.get(`https://itunes.apple.com/search?term=${data}`, config);
         if (!value)
             return;

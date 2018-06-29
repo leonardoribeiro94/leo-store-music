@@ -57,7 +57,7 @@ class CardList extends React.Component {
   }
 }
 
-const mapStateToProps = store => ({ data: store.state });
+const mapStateToProps = store => ({ data: store.cardlist });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ getMusicList, updateValueField }, dispatch);
