@@ -4,7 +4,7 @@ const _itunesService = new ItunesService();
 
 export const getMusicList = data => ({
     type: type.GET_MUSIC_LIST,
-    newValue: _itunesService.getProductList(data)
+    valueList: _itunesService.getProductList(data) 
 });
 
 export const updateValueField = data => ({

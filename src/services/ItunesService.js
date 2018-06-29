@@ -1,4 +1,5 @@
 import axios from "axios";
+
 const config = {
     headers: {
         "Access-Control-Allow-Origin": "*"
@@ -7,13 +8,12 @@ const config = {
 
 class ItunesService {
     getProductList = async (data) => {
-        let value = await axios.get(`https://itunes.apple.com/search?term=${data}`, config)
-            .then((res) => res.data)
-            .catch(error => console.log(error));
-        if (!value.results)
+        
+        let value = await axios.get(`https://itunes.apple.com/search?term=${data}`, config);
+        if (!value)
             return;
 
-        return value.results;
+        return value;
     }
 }
 
