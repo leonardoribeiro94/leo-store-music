@@ -8,12 +8,15 @@ const config = {
 
 class ItunesService {
     getProductList = async (data) => {
+        try {
+            let value = await axios.get(`https://itunes.apple.com/search?term=${data}`, config);
+            if (!value)
+                return;
 
-        let value = await axios.get(`https://itunes.apple.com/search?term=${data}`, config);
-        if (!value)
-            return;
-
-        return value;
+            return value;
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 

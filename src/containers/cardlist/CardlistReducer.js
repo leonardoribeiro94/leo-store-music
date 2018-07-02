@@ -1,18 +1,17 @@
-import type from "./ActionType";
-
 const initialState = {
     value: "",
     list: []
 };
 
 const cardlist = (state = initialState, action) => {
+    
     switch (action.type) {
-        case type.GET_MUSIC_LIST:
+        case "GET_MUSIC_LIST":
             return {
                 ...state,
-                list: action.valueList
+                list: action.value.results
             };
-        case type.UPDATE_MUSIC_VALUE:
+        case "UPDATE_MUSIC_VALUE":
             return {
                 ...state,
                 value: action.newValue

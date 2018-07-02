@@ -1,7 +1,7 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { getMusicList, updateValueField } from "./providers/CardListAction";
+import { getMusicList, updateValueField } from "./CardListAction";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -37,7 +37,6 @@ class CardList extends React.Component {
               Search!
             </Button>
             <Grid container spacing={24} style={{ padding: 24 }}>
-              {console.log(this.props.data.list)}
               {this.props.data.list.map(items => (
                 <Grid key={items.trackId} item xs={4} sm={4} lg={4} xl={3}>
                   <Cards
