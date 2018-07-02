@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
 import cardlist from "../containers/cardlist/CardlistReducer";
-import rootSaga from "../containers/cardlist/CardListSaga";
+import cardListSaga from "../containers/cardlist/CardListSaga";
 const sagaMiddleware = new createSagaMiddleware();
 
 const Store = createStore(
@@ -11,6 +11,6 @@ const Store = createStore(
     applyMiddleware(sagaMiddleware)
 );
 
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(cardListSaga);
 
 export default Store;
